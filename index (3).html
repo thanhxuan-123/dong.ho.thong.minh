@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HuyetApPro – Máy đo huyết áp thông minh chính hãng</title>
+<meta name="description" content="Máy đo huyết áp thông minh chính hãng, bảo hành 24 tháng, giao nhanh Hà Nội, TP.HCM, Đà Nẵng. Trả góp 0%.">
+<style>
+:root{--red:#d70018;--red-d:#a80013;--ink:#222;--mut:#666;--line:#e5e5e5;--bg:#f4f4f4;--ok:#0a8f4e}
+*{box-sizing:border-box;margin:0}
+body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.5}
+a{color:inherit;text-decoration:none}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid #ffb400;outline-offset:2px}
+.w{max-width:1200px;margin:0 auto;padding:0 16px}
+.top{background:var(--red-d);color:#fff;font-size:13px;padding:6px 0}
+.top .w{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+header{background:var(--red);color:#fff;position:sticky;top:0;z-index:5}
+header .w{display:flex;align-items:center;gap:16px;padding-top:10px;padding-bottom:10px}
+.logo{font-weight:800;font-size:22px;white-space:nowrap}
+.search{flex:1;display:flex;background:#fff;border-radius:8px;overflow:hidden;min-width:0}
+.search input{flex:1;border:0;padding:10px 14px;font-size:15px;min-width:0}
+.search button{border:0;background:#fff;color:var(--red);font-weight:700;padding:0 16px;cursor:pointer}
+.hot{white-space:nowrap;font-weight:600}
+nav{background:#fff;border-bottom:1px solid var(--line)}
+nav .w{display:flex;gap:4px;overflow-x:auto}
+nav a{padding:12px 14px;white-space:nowrap;font-size:14px;font-weight:600}
+nav a:hover{color:var(--red)}
+.hero{display:grid;grid-template-columns:2fr 1fr;gap:12px;margin:16px 0}
+.banner{background:linear-gradient(120deg,var(--red),#ff4d5e);color:#fff;border-radius:12px;padding:40px 36px;display:flex;justify-content:space-between;align-items:center;gap:20px;overflow:hidden}
+.banner h1{font-size:clamp(26px,4vw,40px);line-height:1.15;margin-bottom:12px}
+.banner p{margin-bottom:20px;max-width:420px}
+.btn{display:inline-block;background:#fff;color:var(--red);font-weight:700;padding:12px 24px;border-radius:8px;border:0;cursor:pointer;font-size:15px}
+.btn.red{background:var(--red);color:#fff}.btn.red:hover{background:var(--red-d)}
+.cuff{flex:none;width:150px;height:150px;border-radius:50%;background:#fff;color:var(--red);display:grid;place-items:center;text-align:center;font-weight:800;box-shadow:0 0 0 12px rgba(255,255,255,.25)}
+.cuff b{display:block;font-size:44px;line-height:1}.cuff small{font-size:13px;font-weight:600}
+.side{display:grid;gap:12px}
+.side div{background:#fff;border-radius:12px;padding:18px;border:1px solid var(--line)}
+.side strong{color:var(--red);display:block}
+.perks{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:16px}
+.perks div{background:#fff;border-radius:10px;padding:14px;font-size:14px;border:1px solid var(--line)}
+.perks b{display:block;font-size:15px}
+section.blk{background:#fff;border-radius:12px;padding:20px;margin-bottom:16px;border:1px solid var(--line)}
+.hd{display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;flex-wrap:wrap;gap:8px}
+.hd h2{font-size:22px}
+.sale{background:var(--red);color:#fff;border-radius:12px;padding:20px;margin-bottom:16px}
+.sale .hd h2{color:#fff}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.card{background:#fff;color:var(--ink);border:1px solid var(--line);border-radius:10px;padding:14px;display:flex;flex-direction:column;gap:6px;position:relative}
+.card:hover{border-color:var(--red)}
+.tag{position:absolute;top:0;left:0;background:var(--red);color:#fff;font-size:12px;padding:2px 10px;border-radius:10px 0 10px 0}
+.dev{height:130px;border-radius:8px;background:#f1f3f5;display:grid;place-items:center;margin-top:10px}
+.dev span{width:78px;height:62px;border-radius:14px;background:#2b2f36;color:#7CFFB2;font:700 20px/62px ui-monospace,monospace;text-align:center;box-shadow:0 0 0 6px #d9dde2}
+.card h3{font-size:15px;line-height:1.3}
+.price{color:var(--red);font-weight:800;font-size:18px}.price s{color:var(--mut);font-weight:400;font-size:13px;margin-left:6px}
+.card ul{list-style:none;padding:0;font-size:13px;color:var(--mut)}
+.card .btn{margin-top:auto;text-align:center;padding:9px}
+.why{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.why p{color:var(--mut);font-size:14px}.why h3{margin-bottom:4px}
+.stores{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.stores div{border:1px solid var(--line);border-radius:10px;padding:14px;font-size:14px}
+.stores h3{color:var(--red);margin-bottom:4px}
+form{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;max-width:720px}
+label{font-size:14px;font-weight:600;display:grid;gap:4px}
+input,select{padding:10px;border:1px solid #ccc;border-radius:8px;font-size:15px;font-family:inherit}
+form .full{grid-column:1/-1}
+.faq details{border-bottom:1px solid var(--line);padding:12px 0}
+.faq summary{font-weight:600;cursor:pointer}
+.faq p{color:var(--mut);margin-top:6px;font-size:14px}
+footer{background:#222;color:#bbb;padding:32px 0;font-size:14px;margin-top:24px}
+footer .w{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+footer h4{color:#fff;margin-bottom:8px}
+.fab{position:fixed;right:16px;bottom:16px;background:var(--ok);color:#fff;padding:12px 18px;border-radius:30px;font-weight:700;z-index:9;box-shadow:0 4px 14px rgba(0,0,0,.25)}
+@media(max-width:900px){.hero,.why,.stores,footer .w{grid-template-columns:1fr}.grid{grid-template-columns:repeat(2,1fr)}.perks{grid-template-columns:repeat(2,1fr)}.hot{display:none}.cuff{display:none}}
+@media(max-width:520px){form{grid-template-columns:1fr}.banner{padding:28px 20px}.grid{gap:8px}}
+</style>
+</head>
+<body>
+<div class="top"><div class="w"><span>Miễn phí giao hàng toàn quốc cho đơn từ 500.000đ</span><span>Hotline: 1800 0000 (miễn phí)</span></div></div>
+<header><div class="w">
+<a class="logo" href="#">HuyetApPro</a>
+<form class="search" role="search" onsubmit="return false" style="display:flex;max-width:none;gap:0"><input type="search" aria-label="Tìm sản phẩm" placeholder="Tìm máy đo huyết áp, đồng hồ sức khỏe…"><button>Tìm</button></form>
+<a class="hot" href="tel:18000000">Gọi mua hàng<br>1800 0000</a>
+</div></header>
+<nav><div class="w">
+<a href="#sale">Khuyến mãi</a><a href="#may-bap-tay">Máy đo bắp tay</a><a href="#dong-ho">Đồng hồ đo huyết áp</a><a href="#phu-kien">Phụ kiện</a><a href="#vi-sao">Vì sao chọn chúng tôi</a><a href="#cua-hang">Cửa hàng</a><a href="#tu-van">Nhận tư vấn</a><a href="#hoi-dap">Hỏi đáp</a>
+</div></nav>
+
+<main class="w">
+<div class="hero">
+<div class="banner">
+<div>
+<h1>Theo dõi huyết áp mỗi ngày, ngay trên điện thoại</h1>
+<p>Máy đo huyết áp thông minh chính hãng. Kết nối Bluetooth, lưu lịch sử, chia sẻ kết quả cho bác sĩ và người thân.</p>
+<a class="btn" href="#sale">Xem ưu đãi</a>
+</div>
+<div class="cuff" aria-hidden="true"><div><b>120/80</b><small>mmHg</small></div></div>
+</div>
+<div class="side">
+<div><strong>Trả góp 0%</strong>Duyệt nhanh bằng CCCD, không cần thẻ tín dụng.</div>
+<div><strong>Thu cũ đổi mới</strong>Trợ giá đến 300.000đ khi đổi máy cũ.</div>
+</div>
+</div>
+
+<div class="perks">
+<div><b>Chính hãng 100%</b>Có tem và hóa đơn VAT</div>
+<div><b>Bảo hành 24 tháng</b>1 đổi 1 trong 30 ngày</div>
+<div><b>Giao trong 2 giờ</b>Nội thành Hà Nội, TP.HCM, Đà Nẵng</div>
+<div><b>Dùng thử tại cửa hàng</b>Đo thử miễn phí trước khi mua</div>
+</div>
+
+<div class="sale" id="sale">
+<div class="hd"><h2>Giá sốc tuần này</h2><span>Số lượng có hạn</span></div>
+<div class="grid">
+<article class="card"><span class="tag">Giảm 22%</span><div class="dev"><span>128/82</span></div><h3>Máy đo huyết áp bắp tay Bluetooth BP-A1</h3><div class="price">790.000đ<s>1.020.000đ</s></div><ul><li>Bộ nhớ 2 người dùng</li><li>Đồng bộ ứng dụng</li></ul><a class="btn red" href="#tu-van">Mua ngay</a></article>
+<article class="card"><span class="tag">Giảm 18%</span><div class="dev"><span>118/76</span></div><h3>Máy đo huyết áp bắp tay giọng nói tiếng Việt BP-V2</h3><div class="price">990.000đ<s>1.210.000đ</s></div><ul><li>Đọc kết quả bằng tiếng Việt</li><li>Phát hiện nhịp tim không đều</li></ul><a class="btn red" href="#tu-van">Mua ngay</a></article>
+<article class="card"><span class="tag">Giảm 15%</span><div class="dev"><span>122/79</span></div><h3>Đồng hồ đo huyết áp thông minh W-Care 1</h3><div class="price">1.490.000đ<s>1.750.000đ</s></div><ul><li>Đo huyết áp, nhịp tim, SpO2</li><li>Pin 7 ngày</li></ul><a class="btn red" href="#tu-van">Mua ngay</a></article>
+<article class="card"><span class="tag">Mới</span><div class="dev"><span>125/80</span></div><h3>Đồng hồ đo huyết áp thông minh W-Care Pro</h3><div class="price">2.390.000đ<s>2.790.000đ</s></div><ul><li>Màn AMOLED, chống nước 5ATM</li><li>Theo dõi giấc ngủ, ECG</li></ul><a class="btn red" href="#tu-van">Mua ngay</a></article>
+</div>
+</div>
+
+<section class="blk" id="may-bap-tay">
+<div class="hd"><h2>Máy đo huyết áp bắp tay</h2><a href="#tu-van" style="color:var(--red)">Xem tất cả</a></div>
+<div class="grid">
+<article class="card"><div class="dev"><span>130/85</span></div><h3>BP-Basic 1 – màn hình lớn</h3><div class="price">490.000đ</div><ul><li>Dùng pin AA hoặc cổng USB</li></ul><a class="btn red" href="#tu-van">Mua ngay</a></article>
+<article class="card"><div class="dev"><span>121/78</span></div><h3>BP-A1 Bluetooth</h3><div class="price">790.000đ</div><ul><li>Đồng bộ ứng dụng</li></ul><a class="btn red" href="#tu-van">Mua ngay</a></article>
+<article class="card"><div class="dev"><span>117/75</span></div><h3>BP-V2 giọng nói tiếng Việt</h3><div class="price">990.000đ</div><ul><li>Phù hợp người lớn tuổi</li></ul><a class="btn red" href="#tu-van">Mua ngay</a></article>
+<article class="card"><div class="dev"><span>124/81</span></div><h3>BP-Duo sạc pin, 2 người dùng</h3><div class="price">1.190.000đ</div><ul><li>Pin sạc, dùng 3 tháng</li></ul><a class="btn red" href="#tu-van">Mua ngay</a></article>
+<article class="card"><div class="dev"><span>126/82</span></div><h3>BP-Mini nhỏ gọn mang đi du lịch</h3><div class="price">590.000đ</div><ul><li>Hộp đựng, pin AAA</li></ul><a class="btn red" href="#tu-van">Mua ngay</a></article>
+<article class="card"><span class="tag">Mới</span><div class="dev"><span>119/77</span></div><h3>BP-A3 cảnh báo tăng huyết áp</h3><div class="price">1.390.000đ</div><ul><li>Đèn báo mức huyết áp theo WHO</li></ul><a class="btn red" href="#tu-van">Mua ngay</a></article>
+<article class="card"><div class="dev"><span>123/80</span></div><h3>BP-Pro đo 2 tay, 4 người dùng</h3><div class="price">1.690.000đ</div><ul><li>Bộ nhớ 400 lần đo</li></ul><a class="btn red" href="#tu-van">Mua ngay</a></article>
+<article class="card"><span class="tag">Combo</span><div class="dev"><span>121/79</span></div><h3>BP-Home bộ gia đình có cân sức khỏe</h3><div class="price">2.190.000đ</div><ul><li>Kèm cân điện tử Bluetooth</li></ul><a class="btn red" href="#tu-van">Mua ngay</a></article>
+<article class="card"><div class="dev"><span>128/84</span></div><h3>BP-Kid vòng bít nhỏ, cho người gầy</h3><div class="price">890.000đ</div><ul><li>Vòng bít 17–22 cm</li></ul><a class="btn red" href="#tu-van">Mua ngay</a></article>
+<article class="card"><div class="dev"><span>117/76</span></div><h3>BP-Care Plus kết nối Zalo</h3><div class="price">1.490.000đ</div><ul><li>Gửi kết quả cho người thân</li></ul><a class="btn red" href="#tu-van">Mua ngay</a></article>
+<article class="card"><div class="dev"><span>124/81</span></div><h3>BP-Eco giá tiết kiệm</h3><div class="price">390.000đ</div><ul><li>Một nút bấm, dễ dùng</li></ul><a class="btn red" href="#tu-van">Mua ngay</a></article>
+<article class="card"><div class="dev"><span>120/78</span></div><h3>BP-Max cổ tay cao cấp</h3><div class="price">1.090.000đ</div><ul><li>Đo cổ tay, gọn nhẹ</li></ul><a class="btn red" href="#tu-van">Mua ngay</a></article>
+</div>
+</section>
+
+<section class="blk" id="dong-ho">
+<div class="hd"><h2>Đồng hồ đo huyết áp thông minh</h2><a href="#tu-van" style="color:var(--red)">Xem tất cả</a></div>
+<div class="grid">
+<article class="card"><div class="dev"><span>119/77</span></div><h3>W-Care Lite</h3><div class="price">990.000đ</div><ul><li>Huyết áp, nhịp tim</li></ul><a class="btn red" href="#tu-van">Mua ngay</a></article>
+<article class="card"><div class="dev"><span>122/79</span></div><h3>W-Care 1</h3><div class="price">1.490.000đ</div><ul><li>Thêm SpO2, giấc ngủ</li></ul><a class="btn red" href="#tu-van">Mua ngay</a></article>
+<article class="card"><div class="dev"><span>125/80</span></div><h3>W-Care Pro</h3><div class="price">2.390.000đ</div><ul><li>AMOLED, ECG</li></ul><a class="btn red" href="#tu-van">Mua ngay</a></article>
+<article class="card"><div class="dev"><span>120/80</span></div><h3>W-Care Senior nút SOS</h3><div class="price">1.790.000đ</div><ul><li>Gọi khẩn cấp cho người thân</li></ul><a class="btn red" href="#tu-van">Mua ngay</a></article>
+<article class="card"><div class="dev"><span>121/78</span></div><h3>W-Care Fit dây silicone</h3><div class="price">1.190.000đ</div><ul><li>Đếm bước, nhịp tim</li></ul><a class="btn red" href="#tu-van">Mua ngay</a></article>
+<article class="card"><span class="tag">Mới</span><div class="dev"><span>118/76</span></div><h3>W-Care Slim thiết kế mỏng</h3><div class="price">1.690.000đ</div><ul><li>Dây kim loại, nhiều màu</li></ul><a class="btn red" href="#tu-van">Mua ngay</a></article>
+<article class="card"><div class="dev"><span>123/80</span></div><h3>W-Care Kids định vị GPS</h3><div class="price">1.390.000đ</div><ul><li>Gọi video, định vị</li></ul><a class="btn red" href="#tu-van">Mua ngay</a></article>
+<article class="card"><div class="dev"><span>120/79</span></div><h3>W-Care Active chống nước 5ATM</h3><div class="price">1.990.000đ</div><ul><li>Bơi lội, chạy bộ</li></ul><a class="btn red" href="#tu-van">Mua ngay</a></article>
+<article class="card"><span class="tag">Cao cấp</span><div class="dev"><span>125/81</span></div><h3>W-Care Gold mặt kính sapphire</h3><div class="price">3.290.000đ</div><ul><li>Pin 14 ngày</li></ul><a class="btn red" href="#tu-van">Mua ngay</a></article>
+<article class="card"><div class="dev"><span>122/80</span></div><h3>W-Care Lady thiết kế nữ</h3><div class="price">1.590.000đ</div><ul><li>Theo dõi chu kỳ</li></ul><a class="btn red" href="#tu-van">Mua ngay</a></article>
+<article class="card"><div class="dev"><span>119/77</span></div><h3>W-Care Sport GPS</h3><div class="price">2.790.000đ</div><ul><li>GPS, đo SpO2 liên tục</li></ul><a class="btn red" href="#tu-van">Mua ngay</a></article>
+<article class="card"><div class="dev"><span>124/82</span></div><h3>W-Care Mini cho cổ tay nhỏ</h3><div class="price">1.290.000đ</div><ul><li>Mặt 1.4 inch</li></ul><a class="btn red" href="#tu-van">Mua ngay</a></article>
+</div>
+</section>
+
+<section class="blk" id="phu-kien">
+<div class="hd"><h2>Phụ kiện và thiết bị sức khỏe</h2><a href="#tu-van" style="color:var(--red)">Xem tất cả</a></div>
+<div class="grid">
+<article class="card"><div class="dev"><span>🔌</span></div><h3>Adapter nguồn 6V cho máy bắp tay</h3><div class="price">120.000đ</div><ul><li>Tương thích đa số máy</li></ul><a class="btn red" href="#tu-van">Mua ngay</a></article>
+<article class="card"><div class="dev"><span>▭</span></div><h3>Vòng bít thay thế size M, L</h3><div class="price">190.000đ</div><ul><li>Size 22–32 cm và 32–42 cm</li></ul><a class="btn red" href="#tu-van">Mua ngay</a></article>
+<article class="card"><div class="dev"><span>⌚</span></div><h3>Dây đồng hồ thay thế</h3><div class="price">150.000đ</div><ul><li>Silicone, kim loại, vải</li></ul><a class="btn red" href="#tu-van">Mua ngay</a></article>
+<article class="card"><div class="dev"><span>🔋</span></div><h3>Sạc không dây đồng hồ</h3><div class="price">160.000đ</div><ul><li>Sạc nam châm</li></ul><a class="btn red" href="#tu-van">Mua ngay</a></article>
+<article class="card"><div class="dev"><span>🧳</span></div><h3>Hộp đựng máy đo chống sốc</h3><div class="price">130.000đ</div><ul><li>Vải chống nước</li></ul><a class="btn red" href="#tu-van">Mua ngay</a></article>
+<article class="card"><div class="dev"><span>🛡</span></div><h3>Kính cường lực đồng hồ</h3><div class="price">60.000đ</div><ul><li>Chống xước, dễ dán</li></ul><a class="btn red" href="#tu-van">Mua ngay</a></article>
+<article class="card"><div class="dev"><span>⚖</span></div><h3>Cân sức khỏe Bluetooth</h3><div class="price">390.000đ</div><ul><li>Đo BMI, mỡ cơ thể</li></ul><a class="btn red" href="#tu-van">Mua ngay</a></article>
+<article class="card"><div class="dev"><span>🌡</span></div><h3>Nhiệt kế hồng ngoại</h3><div class="price">290.000đ</div><ul><li>Đo trán, 1 giây</li></ul><a class="btn red" href="#tu-van">Mua ngay</a></article>
+</div>
+</section>
+
+<section class="blk" id="vi-sao">
+<div class="hd"><h2>Vì sao chọn HuyetApPro</h2></div>
+<div class="why">
+<div><h3>Đo chuẩn, có kiểm định</h3><p>Sản phẩm có giấy công bố lưu hành của Bộ Y tế. Nhân viên hướng dẫn cách đeo và đo đúng ngay khi nhận hàng.</p></div>
+<div><h3>Hỗ trợ bằng tiếng Việt</h3><p>Ứng dụng, sách hướng dẫn và tổng đài đều bằng tiếng Việt. Cài đặt giúp ông bà, cha mẹ qua video call.</p></div>
+<div><h3>Bảo hành tại địa phương</h3><p>Đổi trả và sửa chữa ngay tại cửa hàng gần bạn, không phải gửi đi xa chờ nhiều ngày.</p></div>
+</div>
+</section>
+
+<section class="blk" id="cua-hang">
+<div class="hd"><h2>Hệ thống cửa hàng</h2></div>
+<div class="stores">
+<div><h3>Hà Nội</h3>123 Cầu Giấy, Cầu Giấy<br>45 Nguyễn Trãi, Thanh Xuân<br>8:00 – 21:30 mỗi ngày</div>
+<div><h3>TP. Hồ Chí Minh</h3>56 Lê Văn Việt, TP. Thủ Đức<br>210 Cách Mạng Tháng 8, Quận 3<br>8:00 – 21:30 mỗi ngày</div>
+<div><h3>Đà Nẵng</h3>78 Nguyễn Văn Linh, Hải Châu<br>8:00 – 21:00 mỗi ngày</div>
+</div>
+</section>
+
+<section class="blk" id="tu-van">
+<div class="hd"><h2>Nhận tư vấn và báo giá</h2></div>
+<form id="f">
+<label>Họ và tên<input name="ten" required autocomplete="name"></label>
+<label>Số điện thoại<input name="sdt" type="tel" required pattern="0[0-9]{9}" title="Nhập số điện thoại 10 số, bắt đầu bằng 0" autocomplete="tel"></label>
+<label>Khu vực<select name="kv"><option>Hà Nội</option><option>TP. Hồ Chí Minh</option><option>Đà Nẵng</option><option>Tỉnh khác</option></select></label>
+<label>Sản phẩm quan tâm<select name="sp"><option>Máy đo bắp tay</option><option>Đồng hồ đo huyết áp</option><option>Chưa rõ, cần tư vấn</option></select></label>
+<div class="full"><button class="btn red" type="submit">Gửi yêu cầu</button> <span id="msg" role="status" style="margin-left:10px;color:var(--ok)"></span></div>
+</form>
+</section>
+
+<section class="blk faq" id="hoi-dap">
+<div class="hd"><h2>Câu hỏi thường gặp</h2></div>
+<details><summary>Nên chọn máy bắp tay hay đồng hồ?</summary><p>Máy bắp tay cho kết quả ổn định hơn, phù hợp để theo dõi bệnh. Đồng hồ tiện đo nhanh và theo dõi xu hướng trong ngày.</p></details>
+<details><summary>Đồng hồ có thay thế được máy bắp tay không?</summary><p>Không nên. Hãy dùng máy bắp tay để đối chiếu định kỳ và hỏi ý kiến bác sĩ khi chỉ số bất thường.</p></details>
+<details><summary>Thời gian giao hàng là bao lâu?</summary><p>Nội thành 3 thành phố lớn giao trong 2 giờ. Các tỉnh khác giao từ 1 đến 3 ngày.</p></details>
+<details><summary>Có được trả góp không?</summary><p>Có. Trả góp 0% qua công ty tài chính bằng CCCD, hoặc qua thẻ tín dụng.</p></details>
+</section>
+</main>
+
+<footer><div class="w">
+<div><h4>HuyetApPro</h4>Thiết bị theo dõi sức khỏe chính hãng.<br>Thông tin trên trang chỉ mang tính tham khảo, không thay thế chẩn đoán của bác sĩ.</div>
+<div><h4>Liên hệ</h4>Hotline: 1800 0000<br>Email: cskh@huyetappro.example<br>Zalo: 0900 000 000</div>
+<div><h4>Chính sách</h4>Bảo hành và đổi trả<br>Giao hàng<br>Bảo mật thông tin</div>
+</div></footer>
+<a class="fab" href="https://zalo.me/0900000000">Chat Zalo</a>
+
+<script>
+document.getElementById('f').addEventListener('submit',function(e){
+  e.preventDefault();
+  var d=new FormData(e.target);
+  // Đổi số Zalo bên dưới thành số của bạn để nhận đơn qua Zalo
+  var t='Tôi cần tư vấn: '+d.get('sp')+' – '+d.get('kv')+'. Tên: '+d.get('ten')+', SĐT: '+d.get('sdt');
+  window.open('https://zalo.me/0900000000','_blank');
+  navigator.clipboard&&navigator.clipboard.writeText(t).catch(function(){});
+  document.getElementById('msg').textContent='Đã sao chép nội dung. Dán vào Zalo để gửi cho chúng tôi.';
+});
+</script>
+</body>
+</html>
